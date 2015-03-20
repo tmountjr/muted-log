@@ -6,9 +6,6 @@ This package extends Laravel's built-in logging facility to ensure that paramete
 
 
 ```
-#!php
-<?php
-
 function throwE($param1)
 {
 	throw new Exception;
@@ -46,10 +43,6 @@ Install using composer: `composer require eems/muted-log`
 After installing the package, make the following changes in `app/config/app.php`:
 
 ```
-#!php
-
-<?php
-
 'providers' => array(
     // ...
     'Eems\MutedLog\MutedLogServiceProvider',
@@ -76,10 +69,6 @@ No specific action is required to use this package. Once Laravel's built-in `Log
 Clearly you should not be including stack traces with passwords or credit card information in your production logs. However, it may be useful to leave detailed stack traces turned on in pre-production environments, as long as you are not using actual sensitive data in your development environment. You can override which facade is used on a per-environment basis by changing the `alias` directive in `app/config/app.php` (which will set the alias globally) and then overriding this behavior in `app/config/[environment]/app.php` where `[environment]` is an environment found in `bootstrap/start.php`:
 
 ```
-#!php
-
-<?php
-
 return array(
     'aliases' => array(
         'Log' => 'Illuminate\Support\Facades\Log',
