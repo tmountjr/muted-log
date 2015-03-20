@@ -38,14 +38,14 @@ Note how the argument `'cleartext parameter'` was replaced with `[string]`.
 
 ## Installation ##
 
-Install using composer: `composer require eems/muted-log`
+Install using composer: `composer require tmountjr/muted-log`
 
 After installing the package, make the following changes in `app/config/app.php`:
 
 ```
 'providers' => array(
     // ...
-    'Eems\MutedLog\MutedLogServiceProvider',
+    'Tmountjr\MutedLog\MutedLogServiceProvider',
 ),
 
 // ...
@@ -53,7 +53,7 @@ After installing the package, make the following changes in `app/config/app.php`
 'aliases' => array(
     // ...
     // 'Log' => 'Illuminate\Support\Facades\Log',
-    'Log' => 'Eems\MutedLog\Facades\MutedLog',
+    'Log' => 'Tmountjr\MutedLog\Facades\MutedLog',
     // ...
 ),
 ```
